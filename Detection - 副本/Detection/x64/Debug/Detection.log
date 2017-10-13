@@ -1,0 +1,70 @@
+﻿生成启动时间为 2017/9/29 15:58:01。
+     1>项目“D:\project\Defects Defection\SourceCode\image segmentation\Detection - 副本\Detection\Detection.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Moc'ing detection.h...
+         Uic'ing MainWindow.ui...
+         Moc'ing template.h...
+         Moc'ing system.h...
+         Moc'ing parameter.h...
+         Moc'ing history.h...
+         Moc'ing camera.h...
+         Moc'ing connection.h...
+         Rcc'ing detection.qrc...
+         RCC: Error in 'D:\project\Defects Defection\SourceCode\image segmentation\Detection - 鍓湰\Detection\detection.qrc': Cannot find file 'Resources/鎸囩ず鐏?.png'
+         
+         Uic'ing camera.ui...
+         Uic'ing connection.ui...
+         Uic'ing history.ui...
+         Uic'ing parameter.ui...
+         Uic'ing system.ui...
+         Uic'ing template.ui...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_camera.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_camera.cpp, GeneratedFiles\Release\moc_camera.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_connection.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_connection.cpp, GeneratedFiles\Release\moc_connection.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_detection.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_detection.cpp, GeneratedFiles\Release\moc_detection.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_history.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_history.cpp, GeneratedFiles\Release\moc_history.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_parameter.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_parameter.cpp, GeneratedFiles\Release\moc_parameter.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_system.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_system.cpp, GeneratedFiles\Release\moc_system.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_template.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_template.cpp, GeneratedFiles\Release\moc_template.cpp.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtCore /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtGui /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtWidgets /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\ActiveQt /Zi /nologo /W1 /WX- /Od /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt camera.cpp connection.cpp detection.cpp GeneratedFiles\Debug\moc_camera.cpp GeneratedFiles\Debug\moc_connection.cpp GeneratedFiles\Debug\moc_detection.cpp GeneratedFiles\Debug\moc_history.cpp GeneratedFiles\Debug\moc_parameter.cpp GeneratedFiles\Debug\moc_system.cpp GeneratedFiles\Debug\moc_template.cpp history.cpp main.cpp parameter.cpp system.cpp template.cpp
+         camera.cpp
+         connection.cpp
+         detection.cpp
+         moc_camera.cpp
+         moc_connection.cpp
+         moc_detection.cpp
+         moc_history.cpp
+         moc_parameter.cpp
+         moc_system.cpp
+         moc_template.cpp
+         history.cpp
+         main.cpp
+         parameter.cpp
+         system.cpp
+         template.cpp
+         正在生成代码...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtCore /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtGui /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtWidgets /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\ActiveQt /Zi /nologo /W1 /WX- /Od /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt GeneratedFiles\qrc_detection.cpp
+         qrc_detection.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\project\Defects Defection\SourceCode\image segmentation\Detection - 副本\x64\Debug\\Detection.exe" /NOLOGO /LIBPATH:D:\Qt\Qt5.4.0\5.4\msvc2013_64\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5AxContainerd.lib Qt5AxBased.lib Qt5Widgetsd.lib Qt5AxBase.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\project\Defects Defection\SourceCode\image segmentation\Detection - 副本\x64\Debug\Detection.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\project\Defects Defection\SourceCode\image segmentation\Detection - 副本\x64\Debug\Detection.lib" /MACHINE:X64 x64\Debug\camera.obj
+         x64\Debug\connection.obj
+         x64\Debug\detection.obj
+         x64\Debug\moc_camera.obj
+         x64\Debug\moc_connection.obj
+         x64\Debug\moc_detection.obj
+         x64\Debug\moc_history.obj
+         x64\Debug\moc_parameter.obj
+         x64\Debug\moc_system.obj
+         x64\Debug\moc_template.obj
+         x64\Debug\qrc_detection.obj
+         x64\Debug\history.obj
+         x64\Debug\main.obj
+         x64\Debug\parameter.obj
+         x64\Debug\system.obj
+         x64\Debug\template.obj
+         Detection.vcxproj -> D:\project\Defects Defection\SourceCode\image segmentation\Detection - 副本\x64\Debug\Detection.exe
+     1>已完成生成项目“D:\project\Defects Defection\SourceCode\image segmentation\Detection - 副本\Detection\Detection.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:26.10

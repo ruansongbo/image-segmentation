@@ -1,0 +1,144 @@
+#include<iostream>  
+#include<vector>  
+#include<fstream>  
+#include<opencv2/opencv.hpp>  
+
+
+using namespace std;
+using namespace cv;
+
+
+bool flags = true;
+//涉及到数据的存储方式，低字节在前面，高字节在后面，所以转换成十进制要注意  
+int ReverseInt(int i)
+{
+	unsigned char ch1, ch2, ch3, ch4;
+	ch1 = i & 255;
+	ch2 = (i >> 8) & 255;
+	ch3 = (i >> 16) & 255;
+	ch4 = (i >> 24) & 255;
+	//转换字节顺序后，先左移再强制类型转换  
+	return((int)ch1 << 24) + ((int)ch2 << 16) + ((int)ch3 << 8) + ch4;
+}
+
+
+//把二进制转换成jpg图片的函数  
+void convertToImage(const string ministImage, const string ministImageLabel, vector<Mat>& Image, vector<int>& Label)
+{
+	ifstream readImage(ministImage, ios::binary);
+	ifstream readLabel(ministImageLabel, ios::binary);
+	//判断是否读取文件失败  
+	if (!readImage.is_open())
+	{
+		cout << "open imageFile failed" << endl;
+	}
+	if (!readLabel.is_open())
+	{
+		cout << "open labelFile failed" << endl;
+	}
+
+
+	//读取图片  
+	int magicNum = 0;//二进制文件中前四个字节存的是魔数  
+	int imageNum = 0;//存的测试集图片总数  
+	int rows = 0;//存的是图片的行数  
+	int columns = 0;//存的是图片的列数  
+
+
+	readImage.read((char*)&magicNum, sizeof(magicNum));
+	readImage.read((char*)&imageNum, sizeof(imageNum));
+	imageNum = ReverseInt(imageNum);
+	readImage.read((char*)&rows, sizeof(rows));
+	rows = ReverseInt(rows);
+	readImage.read((char*)&columns, sizeof(columns));
+	columns = ReverseInt(columns);
+	//Mat imageTemp = Mat(28,28, CV_8UC1);//临时Mat类型，用来暂时保存图片  
+
+
+	int count = 0;
+	while (count<imageNum)//不能用readImage.eof()来循环!!!  
+	{
+		Mat imageTemp = cv::Mat::zeros(rows, columns, CV_8UC1);//临时Mat类型，用来暂时保存图片(这句话不能放在外面，必须重新定义，重新初始化)  
+		//每字节每字节的来读取图片像素  
+		for (int i = 0; i < rows; ++i)
+		{
+			for (int j = 0; j < columns; ++j)
+			{
+				unsigned char charTemp;
+				readImage.read((char*)&charTemp, sizeof(charTemp));
+				imageTemp.at<uchar>(i, j) = int(charTemp);                     //？？？？要用int转换？？  
+			}
+		}
+		Image.push_back(imageTemp);
+		count++;
+	}
+
+
+	//来读取标签  
+	int maigcNum = 0;//读取魔数  
+	readLabel.read((char*)&maigcNum, sizeof(maigcNum));
+	int labelNum;//读取标签总数  
+	readLabel.read((char*)&labelNum, sizeof(labelNum));
+	labelNum = ReverseInt(labelNum);
+	int count1 = 0;//用来循环  
+	unsigned char labelTemp;
+	while (count1<labelNum)
+	{
+		readLabel.read((char*)&labelTemp, sizeof(labelTemp));
+		Label.push_back(int(labelTemp));//需要强制转换成整型  
+		//cout << int(labelTemp);  
+		count1++;
+	}
+	//readLabel.close();  
+}
+
+
+//存储图片的函数  
+void saveImage(vector<Mat>& Image, vector<int>& Label)
+{
+	const string savePath1 = "";
+	const string savePath2 = "";
+	int array[10] = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+	if (flags)
+	{
+		for (int i = 0; i < Image.size(); ++i)
+		{
+			char s1[10], s2[10];
+			sprintf(s1, "%d", array[Label[i]]);
+			array[Label[i]]++;
+			sprintf(s2, "%d", Label[i]);
+			imwrite(savePath1 + s2 + "_" + s1 + ".jpg", Image[i]);
+		}
+	}
+	else
+	{
+		for (int i = 0; i < Image.size(); ++i)
+		{
+			char s1[10], s2[10];
+			sprintf(s1, "%d", array[Label[i]]);
+			array[Label[i]]++;
+			sprintf(s2, "%d", Label[i]);
+			imwrite(savePath2 + s2 + "_" + s1 + ".jpg", Image[i]);
+		}
+	}
+}
+
+
+int main(int argv, char *argc[])
+{
+	string ministTestImage = "mnist_dataset\\t10k-images.idx3-ubyte";
+	string ministTestImageLabel = "mnist_dataset\\t10k-labels.idx1-ubyte";
+	string ministTrainImage = "mnist_dataset\\train-images.idx3-ubyte";
+	string ministTrainImageLabel = "mnist_dataset\\train-labels.idx1-ubyte";
+
+
+	vector<Mat> testImage;//用来保存测试集的图片  
+	vector<int> testLabel;//用来保存测试集的标签  
+	vector<Mat> trainImage;//用来保存训练集的图片  
+	vector<int> trainLabel;//用来保存训练集的标签  
+	convertToImage(ministTestImage, ministTestImageLabel, testImage, testLabel);//转成图片  
+	convertToImage(ministTrainImage, ministTrainImageLabel, trainImage, trainLabel);//转成图片
+	saveImage(testImage, testLabel);
+
+	return 0;
+}

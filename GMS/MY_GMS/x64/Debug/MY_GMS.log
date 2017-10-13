@@ -1,0 +1,29 @@
+﻿生成启动时间为 2017/8/28 14:53:11。
+     1>项目“D:\project\瑕疵检测\SourceCode\image segmentation\GMS\MY_GMS\MY_GMS.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt demo.cpp
+         demo.cpp
+     1>D:\opencv3.0.0\build\include\opencv2/core/mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\opencv3.0.0\build\include\opencv2/core/persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\opencv3.0.0\build\include\opencv2/core/utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(145): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(146): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(150): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(151): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(155): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(156): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(160): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(161): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(174): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(175): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(221): warning C4244: “=”: 从“const double”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(222): warning C4244: “=”: 从“const double”转换到“int”，可能丢失数据
+     1>d:\project\瑕疵检测\sourcecode\image segmentation\gms\my_gms\gms_matcher.h(411): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\project\瑕疵检测\SourceCode\image segmentation\GMS\x64\Debug\MY_GMS.exe" /INCREMENTAL /NOLOGO opencv_ts300d.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\project\瑕疵检测\SourceCode\image segmentation\GMS\x64\Debug\MY_GMS.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\project\瑕疵检测\SourceCode\image segmentation\GMS\x64\Debug\MY_GMS.lib" /MACHINE:X64 x64\Debug\demo.obj
+         MY_GMS.vcxproj -> D:\project\瑕疵检测\SourceCode\image segmentation\GMS\x64\Debug\MY_GMS.exe
+     1>已完成生成项目“D:\project\瑕疵检测\SourceCode\image segmentation\GMS\MY_GMS\MY_GMS.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.51

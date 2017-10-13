@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="detection">
+    <file>Resources/www.ico.la_3c07078ec5f3c03e57f1364925bee7ac_128X128.ico</file>
+    <file>Resources/aimosheng.png</file>
+    <file>Resources/emc.jpg</file>
+    <file>Resources/logo.png</file>
+  </qresource>
+</RCC>

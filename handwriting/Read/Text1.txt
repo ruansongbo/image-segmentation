@@ -1,0 +1,67 @@
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include "opencv2/imgcodecs.hpp"
+#include <opencv2/highgui.hpp>
+#include <opencv2/ml.hpp>
+
+#include <string>
+#include <iostream>
+#include <fstream>
+
+int reverseInt(int i)
+{
+	unsigned char c1, c2, c3, c4;
+
+	c1 = i & 255;
+	c2 = (i >> 8) & 255;
+	c3 = (i >> 16) & 255;
+	c4 = (i >> 24) & 255;
+
+	return ((int)c1 << 24) + ((int)c2 << 16) + ((int)c3 << 8) + c4;
+}
+
+using namespace std;
+using namespace cv;
+using namespace cv::ml;
+int main()
+{
+	int magic_number = 0;
+	int number_of_images = 0;
+	int number_of_items;
+	int n_rows = 0;
+	int n_cols = 0;
+
+	Mat DataMat;
+
+	ifstream file("mnist_dataset\\train-images.idx3-ubytee", ios::binary);
+	//ifstream file("mnist_dataset\\train-labels.idx1-ubyte", ios::binary);
+	if (file.fail()==false)
+	{
+		cout << "成功打开图像集 ... \n";
+
+		file.read((char*)&magic_number, sizeof(magic_number));
+		file.read((char*)&number_of_images, sizeof(number_of_images));
+		file.read((char*)&n_rows, sizeof(n_rows));
+		file.read((char*)&n_cols, sizeof(n_cols));
+		//cout << magic_number << " " << number_of_images << " " << n_rows << " " << n_cols << endl;
+
+		magic_number = reverseInt(magic_number);
+		number_of_images = reverseInt(number_of_images);
+		n_rows = reverseInt(n_rows);
+		n_cols = reverseInt(n_cols);
+		cout << "MAGIC NUMBER = " << magic_number
+			<< " ;NUMBER OF IMAGES = " << number_of_images
+			<< " ; NUMBER OF ROWS = " << n_rows
+			<< " ; NUMBER OF COLS = " << n_cols << endl;
+
+		//cout << "成功打开Label集 ... \n";
+
+		//file.read((char*)&magic_number, sizeof(magic_number));
+		//file.read((char*)&number_of_items, sizeof(number_of_items));
+		//magic_number = reverseInt(magic_number);
+		//number_of_items = reverseInt(number_of_items);
+		//cout << "MAGIC NUMBER = " << magic_number << "  ; NUMBER OF ITEMS = " << number_of_items << endl;
+	}
+
+	return 0;
+}

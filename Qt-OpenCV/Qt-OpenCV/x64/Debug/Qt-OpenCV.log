@@ -1,0 +1,26 @@
+﻿生成启动时间为 2017/9/21 19:05:14。
+     1>项目“D:\project\瑕疵检测\SourceCode\image segmentation\Qt-OpenCV\Qt-OpenCV\Qt-OpenCV.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Moc'ing detection.h...
+         Uic'ing detection.ui...
+         Rcc'ing detection.qrc...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_detection.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_detection.cpp, GeneratedFiles\Release\moc_detection.cpp.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtCore /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtGui /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\ActiveQt /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtWidgets /Zi /nologo /W1 /WX- /Od /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt detection.cpp GeneratedFiles\Debug\moc_detection.cpp main.cpp
+         detection.cpp
+         moc_detection.cpp
+         main.cpp
+         正在生成代码...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include /I.\GeneratedFiles\Debug /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtCore /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtGui /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\ActiveQt /ID:\Qt\Qt5.4.0\5.4\msvc2013_64\include\QtWidgets /Zi /nologo /W1 /WX- /Od /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt GeneratedFiles\qrc_detection.cpp
+         qrc_detection.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\project\瑕疵检测\SourceCode\image segmentation\Qt-OpenCV\x64\Debug\\Qt-OpenCV.exe" /NOLOGO /LIBPATH:D:\Qt\Qt5.4.0\5.4\msvc2013_64\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5AxContainerd.lib Qt5AxBased.lib Qt5Widgetsd.lib Qt5AxBase.lib opencv_calib3d2413d.lib opencv_contrib2413d.lib opencv_core2413d.lib opencv_features2d2413d.lib opencv_flann2413d.lib opencv_gpu2413d.lib opencv_highgui2413d.lib opencv_imgproc2413d.lib opencv_legacy2413d.lib opencv_ml2413d.lib opencv_nonfree2413d.lib opencv_objdetect2413d.lib opencv_ocl2413d.lib opencv_photo2413d.lib opencv_stitching2413d.lib opencv_superres2413d.lib opencv_ts2413d.lib opencv_video2413d.lib opencv_videostab2413d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\project\瑕疵检测\SourceCode\image segmentation\Qt-OpenCV\x64\Debug\Qt-OpenCV.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\project\瑕疵检测\SourceCode\image segmentation\Qt-OpenCV\x64\Debug\Qt-OpenCV.lib" /MACHINE:X64 x64\Debug\detection.obj
+         x64\Debug\moc_detection.obj
+         x64\Debug\qrc_detection.obj
+         x64\Debug\main.obj
+         Qt-OpenCV.vcxproj -> D:\project\瑕疵检测\SourceCode\image segmentation\Qt-OpenCV\x64\Debug\Qt-OpenCV.exe
+     1>已完成生成项目“D:\project\瑕疵检测\SourceCode\image segmentation\Qt-OpenCV\Qt-OpenCV\Qt-OpenCV.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:08.54

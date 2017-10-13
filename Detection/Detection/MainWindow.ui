@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DetectionClass</class>
+ <widget class="QMainWindow" name="DetectionClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>818</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Surface Defects Detection</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="detection.qrc">
+    <normaloff>:/Detection/Resources/icon.png</normaloff>:/Detection/Resources/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>360</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>开始检测</string>
+    </property>
+    <property name="icon">
+     <iconset resource="detection.qrc">
+      <normaloff>:/Detection/Resources/12.png</normaloff>:/Detection/Resources/12.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>48</width>
+      <height>48</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>321</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>待检测图像</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>300</width>
+       <height>400</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>321</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>模板图像</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>300</width>
+       <height>400</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>10</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>网络连接状态</string>
+    </property>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>主机通讯：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="masterlabel">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>110</y>
+      <width>151</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>机柜位置状态</string>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>左传感器：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>右传感器：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Lsenlabel">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Rsenlabel">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>70</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>249</y>
+      <width>151</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>缺陷检测结果</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>检测结果：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="resultlabel">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>40</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actioncamera"/>
+   <addaction name="separator"/>
+   <addaction name="actiontemplate"/>
+   <addaction name="separator"/>
+   <addaction name="actionparameter"/>
+   <addaction name="separator"/>
+   <addaction name="actionconnection"/>
+   <addaction name="separator"/>
+   <addaction name="actionsystem"/>
+   <addaction name="separator"/>
+   <addaction name="actionhistory"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actioncamera">
+   <property name="icon">
+    <iconset resource="detection.qrc">
+     <normaloff>:/Detection/Resources/14.png</normaloff>:/Detection/Resources/14.png</iconset>
+   </property>
+   <property name="text">
+    <string>相机设置</string>
+   </property>
+  </action>
+  <action name="actiontemplate">
+   <property name="icon">
+    <iconset resource="detection.qrc">
+     <normaloff>:/Detection/Resources/15.png</normaloff>:/Detection/Resources/15.png</iconset>
+   </property>
+   <property name="text">
+    <string>模板设置</string>
+   </property>
+  </action>
+  <action name="actionparameter">
+   <property name="icon">
+    <iconset resource="detection.qrc">
+     <normaloff>:/Detection/Resources/6.png</normaloff>:/Detection/Resources/6.png</iconset>
+   </property>
+   <property name="text">
+    <string>参数设置</string>
+   </property>
+  </action>
+  <action name="actionconnection">
+   <property name="icon">
+    <iconset resource="detection.qrc">
+     <normaloff>:/Detection/Resources/5.png</normaloff>:/Detection/Resources/5.png</iconset>
+   </property>
+   <property name="text">
+    <string>连接设置</string>
+   </property>
+  </action>
+  <action name="actionsystem">
+   <property name="icon">
+    <iconset resource="detection.qrc">
+     <normaloff>:/Detection/Resources/10.png</normaloff>:/Detection/Resources/10.png</iconset>
+   </property>
+   <property name="text">
+    <string>系统设置</string>
+   </property>
+  </action>
+  <action name="actionhistory">
+   <property name="icon">
+    <iconset resource="detection.qrc">
+     <normaloff>:/Detection/Resources/4.png</normaloff>:/Detection/Resources/4.png</iconset>
+   </property>
+   <property name="text">
+    <string>历史信息</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="detection.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actioncamera</sender>
+   <signal>triggered()</signal>
+   <receiver>DetectionClass</receiver>
+   <slot>camera_set()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionconnection</sender>
+   <signal>triggered()</signal>
+   <receiver>DetectionClass</receiver>
+   <slot>connection_set()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionhistory</sender>
+   <signal>triggered()</signal>
+   <receiver>DetectionClass</receiver>
+   <slot>history_display()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionparameter</sender>
+   <signal>triggered()</signal>
+   <receiver>DetectionClass</receiver>
+   <slot>paramter_set()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actiontemplate</sender>
+   <signal>triggered()</signal>
+   <receiver>DetectionClass</receiver>
+   <slot>template_set()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionsystem</sender>
+   <signal>triggered()</signal>
+   <receiver>DetectionClass</receiver>
+   <slot>system_set()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>camera_set()</slot>
+  <slot>template_set()</slot>
+  <slot>paramter_set()</slot>
+  <slot>connection_set()</slot>
+  <slot>system_set()</slot>
+  <slot>history_display()</slot>
+ </slots>
+</ui>
